@@ -1,0 +1,162 @@
+#headerdiv h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 70, 0);
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+
+#demo {
+    color: #01435c;
+    font-weight: bold;
+    float: right;
+}
+#headerdiv {
+    display: block;
+    
+}
+
+
+#demodiv {
+    float: right;
+}
+
+#headerdiv p {
+    font-size: 12px;
+    margin-top: -10px;
+    color: #01435c;
+    font-weight: bold;
+    width: 250px;
+}
+
+header {
+    display: block;
+    border-bottom: 8px solid #01435c;
+}
+
+footer {
+    border-top: 8px solid #01435c;
+}
+
+
+header, #headerdiv, footer, #footerdiv {
+    width: 100%;
+    /*background: #21B334;*/
+    background: #009fdc;
+}
+
+#main {
+    width:710px;
+    margin: auto;
+    background-color: rgb(185, 197, 177);
+}
+
+#d1 {
+    padding: 20px;
+}
+
+h2, h3 {
+    font-size: 15px;
+}
+
+#imgdiv {
+    width: 100%;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+#mainimg, #imgdiv p {
+    width: 75%;
+    display: block;
+    margin: auto;
+    font-size: 11px;
+}
+
+
+body {
+    background-color: rgb(240, 241, 240);
+}
+
+html, body {
+    margin: 0;
+    margin-top: -7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#headerdiv {
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+
+}
+
+#footerdiv {
+    width: 50%;
+    margin: auto;
+    padding: 13px;
+    height: 75px;
+}
+
+footer {
+    margin-bottom: 0;
+    bottom: 0;
+    
+}
+#headerdiv a {
+    color: black;
+}
+
+#headerdiv a:hover {
+    color: black;
+}
+#footerdiv p {
+    font-size: 10px;
+    bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px black solid;
+    font: 12px sans-serif;
+}
+
+td {
+    border: 1px black solid;
+    padding: 5px;
+}
+
+#social {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: -12px;
+    right: 86px;
+    z-index: 100;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    background-color: rgb(2, 86, 155);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    width: 60px;
+    height: 30px;
+    
+  }
+  
+  #myBtn:hover {
+    background-color: rgb(82, 98, 150);
+  }

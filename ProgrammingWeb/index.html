@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+    <html>    
+        <head>        
+            <title>ProgrammingWeb</title>        
+            <meta charset="utf-8" />                
+            <link rel="stylesheet" type="text/css" href="nettstedstil.css" />
+            <link rel="stylesheet" type="text/css" href="hovedsidestil.css" />        
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <link rel="shortcut icon" href="licon.png" /> 
+            <link rel="icon" href="pageicon.png"> 
+            <style>
+                
+            </style>  
+        </head>
+     <body>
+            <script>
+                    // When the user scrolls down 20px from the top of the document, show the button
+                    window.onscroll = function() {scrollFunction()};
+                    
+                    function scrollFunction() {
+                      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("myBtn").style.display = "block";
+                      } else {
+                        document.getElementById("myBtn").style.display = "none";
+                      }
+                    }
+                    
+                    // When the user clicks on the button, scroll to the top of the document
+                    function topFunction() {
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+                    }
+                    </script>
+
+         <div id="wrapper"> 
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>                         
+         <nav id="menyen">
+            <div id="meny_lukket">                
+                <a href="#meny_aapen"><img id="aapnemenypng" src="aapnemeny.png"></a>            
+                </div>            
+                <div id="meny_aapen">                
+                    <a href="#meny_lukket"><img id="xbutton" src="buttonx.png"></a>            
+             <ul>                            
+                 <li><a href="kodespraak.html">Languages</a></li>                
+                 <li><a href="developers.html">Developers</a></li>                
+                 <li><a href="frontpage.html">Pong game!</a></li>                
+                 <li><a href="links.html">Links and sources</a></li>                
+                                                    
+             </ul>
+            </div>       
+         </nav>
+          <header id="tekstheader"> 
+                <a href="index.html"> 
+                    <img  src="title.png" alt="logo" style="width:500px;height:200px;">     
+                </a>                                              
+        </header> 
+        <marquee id="frontmarquee2" behavior="scroll" direction="left">
+               HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                JAVASCRIPT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 PYTHON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASKELL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RUBY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+               <!--<img src="panorama2.jpg" height="40" alt="Natural" /> -->
+              </marquee>                        
+        <header id="bildeheader">                
+            <img src="programming.png" alt="Programming languages">            
+        </header>             
+        <main>                
+            <article id="article1">                    
+                <h2>Use of computers</h2>                   
+                <p> 
+                        Nowadays,  computers had become one of the part in our daily life. 
+                        Computers can make our jobs become easier. 
+                        They can be used for communicational purposes (internet), to store and calculate data and to write up massive documents multiple times while only needing to write it up once.<br><br>
+                        Others use computers for entertainment value; to play games, watch movies and play music etc.
+                        Computers are also more convinient and reliable than the older ways of doing things, like type writers, scales and other counting devices.<br><br>
+
+                     <a style="font-weight:bold">   The reason of why people use computers:</a><br><br>
+
+                        <ul>                            
+                                <li><a style="font-weight: bold">➞Speed:</a> People use computer to makes their job can be done easier and faster. For example, transferring data, banking, communication, and more.</li><br>                
+                                <li><a style="font-weight: bold">➞Reliability:</a> People are using computer to do their jobs because human can get affected by many factors and cause them cant achieved their job.</li><br>                
+                                <li><a style="font-weight: bold">➞Consistency:</a> Computer do not require to rest, they can do their own jobs for all day long, unless the computer got affected by virus or malfunction.</li><br>               
+                                <li><a style="font-weight: bold">➞Communication:</a> Computer also become a good communication tools for human because it have some software that can make us communicate all around the world.</li><br> 
+                                <li><a style="font-weight: bold">➞Storage:</a> Computer contains a huge storage that can store up a huge amount of information, unlike human they can easily forget their things.</li>               
+                                                                   
+                            </ul> 
+                </p>               
+            </article>                
+            <article>                    
+                <h2>Short about programming languages</h2>                    
+                <p>Programmers use programming languages to communicate with computers. 
+                    Many different languages exist, and each one has its own unique features, though they all share some similarities. 
+                    Because each language is different, each may be best suited for a certain purpose or purposes within certain industries.<br><br>
+                    Some programming languages are used to create programs to solve problems or interpret data. Other programming languages are more suitable for making create software or apps that entertain. With a strong need for unique and diverse programming languages, it is virtually impossible to create a single universal programming language that meets all needs. 
+                    <br><br>Programming languages are often revised and even combined with other languages over time, evolving to meet our changing technological needs.</p><br>
+                    <img style="max-width:600px; width:100%;" id="codingimg" src="coding.jpg" alt="Coding">  <br><br>
+                    <img style="max-width:600px; width:100%;" id="codingimg" src="servers.jpg" alt="Servers">             
+            </article>                
+            <article>                    
+                <h2>History</h2>                    
+                <p>Programmable devices have existed at least as far back as 1206 AD, when the automata of Al-Jazari were programmable, via pegs and cams, to play various rhythms and drum patterns;[3] and the 1801 Jacquard loom could produce entirely different weaves by changing the "program" - a series of pasteboard cards with holes punched in them.
+                    <br><br>However, the first computer program is generally dated to 1843, when mathematician Ada Lovelace published an algorithm to calculate a sequence of Bernoulli numbers, intended to be carried out by Charles Babbage's Analytical Engine.[4]
+                        Data and instructions were once stored on external punched cards, which were kept in order and arranged in program decks.
+                        <br><br>In the 1880s Herman Hollerith invented the concept of storing data in machine-readable form.[5] Later a control panel (plugboard) added to his 1906 Type I Tabulator allowed it to be programmed for different jobs, and by the late 1940s, unit record equipment such as the IBM 602 and IBM 604, were programmed by control panels in a similar way; as were the first electronic computers. 
+                        <br><br>However, with the concept of the stored-program computers introduced in 1949, both programs and data were stored and manipulated in the same way in computer memory.</p>                
+            </article>            
+        </main>     
+        <main>
+                <article>
+                        <marquee id="frontmarquee" behavior="scroll" direction="left">➞ All credit for the information written on this site 
+                            can be found under "links and sources" tab ⬅</marquee>
+                
+                </article>
+            </main>    
+        </div>
+    
+      <div id="box"><p id="bottom">© Kasper Melheim 2019</p></div>
+      <div id="social">
+        <a href="http://www.instagram.com/kaspermelheim" target="_blank"><img src="instagram.png" width="40px" height="40px" alt="Programming languages"></a>
+        <a href="https://www.facebook.com/kasper.melheim" target="_blank"><img src="facebook.png" width="40px" height="40px"alt="Programming languages"></a>
+      </div>
+    </body>   
+</html>

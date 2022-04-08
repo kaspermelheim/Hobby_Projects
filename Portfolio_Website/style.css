@@ -1,0 +1,339 @@
+body {
+    background-color: rgb(167, 167, 247);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #212344;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150px;
+    color:#212344;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header p{
+  margin-top:-85px;
+  margin-left: 20px;
+}
+
+
+#wrapper h2 {
+    font-size: 40px;
+}
+
+#wrapper {
+  position: absolute;
+}
+
+#socials img {
+  height: 125px;
+  width: 125px;
+  margin-right: 30px;
+}
+
+
+#about {
+    margin-top: 420px;
+}
+
+#contact p {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+#wave_img {
+    width: 225px;
+    height: 225px;
+}
+
+#kasper_img {
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    border: 0px solid #212344;
+}
+
+#wave_imgdiv {
+    float: right;
+    margin-right: 50px;
+}
+
+#wrapper {
+    position: absolute;
+    height: 100vh;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 75px;
+}
+
+#wrapper p {
+    font-size: 25px;
+}
+
+/*Navbar code*/
+#nav {
+    list-style-type: none;
+    margin-top: -10px;
+    margin: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(88, 86, 129);
+}
+
+#nav #title {
+    float:left;
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#nav li {
+    float: right;
+}
+
+#nav li a {
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px 29px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
+
+#nav li a:hover:not(.active) {
+    background-color: rgb(104, 112, 158);
+}
+
+#nav .active {
+    background-color: #212344;
+}
+
+@media (max-width: 720px) {        
+    li {
+        display: none;
+    }
+    h1 {
+        font-size: 80px;
+    }
+    #wave_img {
+        width: 90px;
+        height: 90px;
+    }
+    #wave_imgdiv {
+      margin-top:40px;
+    }
+    .header p {
+        font-size: 17px;
+        margin-top:-55px
+    }
+    #kasper_img {
+      width: 90px;
+      height: 90px;
+    }
+
+    #wrapper h2 {
+      font-size: 27px;
+    }
+
+    #contact p{
+      font-size: 18px;
+    }
+
+    #about p{
+      font-size: 18px;
+    }
+    #socials p{
+      font-size: 18px;
+    }
+    #skills p{
+      font-size: 18px;
+    }
+    #wrapper {
+      margin-left: 55px;
+      margin-right: 75px;
+    }
+
+  }
+
+ .circle{
+  position: absolute;
+  margin: -50px;
+  margin-bottom: 120px;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.circle2{
+  position: absolute;
+  margin: -50px;
+  margin-bottom: -2000px;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small{
+  width: 100px;
+  height: 50px;
+  left: -50px;
+  bottom: -50px;
+}
+
+.medium{
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.large{
+  width: 300px;
+  height: 300px;
+  left: -150px;
+  bottom: -150px;
+}
+
+.xlarge{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+.xxlarge{
+  width: 500px;
+  height: 500px;
+  left: -250px;
+  bottom: -250px;
+}
+
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+.shade4{
+  opacity: 0.8;
+}
+
+.shade5{
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.4);
+  }
+  
+  50%{
+    transform: scale(1);
+  }
+  
+  100%{
+    transform: scale(0.4);
+  }
+}
+  
+#footer {
+  background-color: rgb(88, 86, 129);
+  padding: 20px;
+  margin-top: 200px;
+  margin-left: -85px;
+  margin-right: -75px;
+  height: 110px;
+}
+
+#footerdiv {
+  margin:auto;
+  width: 75%;
+}
+
+#footer p {
+  font-size: 15px;
+  color: white;
+
+}
+
+#myBtn {
+  float: right;
+  margin-bottom: 50px;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  background-color: #212344;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  width: 75px;
+  height: 30px;
+  
+}
+
+#myBtn:hover {
+  background-color: rgb(104, 112, 158);
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+#socials i {
+  margin: 25px;
+  font-size: 125px;
+  color:#444886;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: rgb(88, 86, 129);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(88, 86, 129) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

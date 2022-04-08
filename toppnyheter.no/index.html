@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ToppNyheter</title>
+    <meta content="Toppnyheter, samlet på en plass. Toppnyheter.no." />
+    <meta content="Breaking news. VG.no, dagbladet.no, tv2.no, nrk.no."/>
+    <script data-ad-client="ca-pub-1299524839153646" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="Scraping_stil.css">
+    <link rel="icon" href="idea.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body onload="lastUpdated()">
+    <header>
+      <div id="headerdiv">
+        <h1><a style="text-decoration: none;color:#01435c;"href="https://kaspermelheim.github.io/">ToppNyheter</a></h1>
+          <p>De mest interessante nyhetene, samlet på en plass</p>
+          <div style="bottom:35px;width: 50%px;"id="demodiv">
+            <p style="font-size: 8px;width: 100%;"id="demo">Sist oppdatert: </p>
+          </div>
+      </div>
+      <div id="google_translate_element" style="float: right; margin-right: 10px;"></div>
+
+    </header>
+      <div class="container-fluid" style="margin-top:35px;">
+        
+        <p style="width:100%">De største nyhetene fra dine favoritt nyhetsmedia, samlet på et sted. Klikk deg inn på linken til i saken du vil lese mer om, du blir sendt til
+          komplett artikkel på utgiver sin side. Nederst på siden har du og mulighet til å laste ned all infoen som en CSV fil. Du har og mulighetene til 
+          å søke i artiklene, for å filtrere artikkler som blir vist.  
+        </p>
+      <div id='table-container'></div>
+    </div><!-- /.container -->
+
+    
+
+<footer>
+  <div id="footerdiv">
+          <p style="color:black;margin-top: -10px;">ToppNyheter tar ikke credit for noen av artiklene på denne siden, alle rettigheter går til de eksterne sidene 
+            nyhetene har blitt hentet fra.<br>
+              
+          </p>
+
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Toppen</button>
+
+  </div>
+</footer>
+
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+
+    <script type="text/javascript">
+
+      //Add href link to element
+      function format_link(link){
+        if (link)
+        //return "<a href='#' target='_blank' style='padding:0px;float:left;font-size:15px;'><p>Les hele saken(Kommer snart!)</p></a>";
+          return "<a href='" + link + "' target='_blank' style='padding:0px;float:left;font-size:15px;'><p>Les hele saken</p></a>";
+      }
+
+      //Add img src to element
+      function format_image(link) {
+        if (link)
+        //return "<a href='#' target='_blank'><img src='idea.png' alt='test'  width='150px' height='auto' style='padding:0px;vertical-align:middle;margin-left: auto;margin-right:auto;display:block;'></a>";
+          return "<a href='" + link + "' target='_blank'><img src='" + link + "' alt='test'  width='140px' height='auto' style='padding:0px;vertical-align:middle;margin-left: auto;margin-right:auto;display:block;'></a>";
+        else
+          return "";
+      }
+
+      //Add text style
+      function format_text(link) {
+        if(link)
+        //return "<p style='padding:0px;Sfont-weight:bold;font-size:15px;text-align:center;'>Kommer snart!</p>";
+          return "<p style='padding:0px;Sfont-weight:bold;font-size:13px;text-align:center;'>"+link+"</p>";
+      }
+      
+
+      CsvToHtmlTable.init({
+        csv_path: 'data/test3.csv',
+        element: 'table-container', 
+        allow_download: true,
+        csv_options: {separator: ',', delimiter: '"'},
+        datatables_options: {"paging": true},
+        //Vegler hvilken funksjoner som skal kjøre, og hvilken column det skal skje på
+        custom_formatting: [[2, format_link], [1, format_image], [0, format_text]  ]
+      });
+    </script>
+</script>
+
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+  
+<script>
+  //Checks when document was last updated
+  function lastUpdated() {
+    var x = new Date(document.lastModified);
+    document.getElementById("demo").innerHTML = "Sist oppdatert: " +x;
+  }
+  </script>
+
+<script type="text/javascript">
+  //Change language of website content
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'no'}, 'google_translate_element');
+  }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  </body>
+</html>

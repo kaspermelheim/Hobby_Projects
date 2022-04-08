@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pong</title>
+        <style>
+
+            body {
+                background-color: #8a0000;
+            }
+            #mittCanvas {
+                background-color: black;
+                display: block;
+                margin: auto;
+            }
+            h1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: sans-serif;
+                color: white;
+                margin-top: 30px;
+            }
+            #canvasdiv {
+                margin: auto;
+                width: 600px;
+                height: 400px;
+                border: solid 2px white;
+            }
+            #pid {
+                margin: auto;
+                width: 600px;
+                height: 55px;
+                font-family: sans-serif;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                border: solid 2px white;
+                border-bottom: none;
+                
+            }
+            #pid #p2 {
+                float: right;
+                margin-right: 10px;
+            }
+            #pid #p1 {
+                float: left;
+                margin-left: 5px;
+            }
+            #divknapp {
+                width: 250px;
+                height: 55px;
+                margin: auto;
+                background-color: black;
+                border: 1px solid rgb(255, 255, 255);
+            }
+            #knapp {
+                margin: auto;
+                width: 100px;
+                height: 54px;
+                background-color: rgb(255, 153, 0);
+                border: none;
+                font-weight: bold;
+                font-size: 15px;
+            }
+            #knapp:hover {
+                background-color: rgb(228, 38, 4);
+            }
+            #knapp:active {
+                background-color: rgb(219, 67, 40);
+            }
+            #knappdiv {
+                margin: auto;
+                width: 100px;
+                height: 54px;
+            }
+            #p1sum {
+                background-color: rgb(0, 0, 0);
+                width: 75px;
+                height: 54px;
+                float: left;
+            }
+            #p2sum {
+                background-color: rgb(0, 0, 0);
+                width: 75px;
+                height: 54px;
+                float: right;
+            }
+            #bla, #gron {
+                margin-top: 0px;
+                font-size: 50px;
+                font-family: sans-serif;
+                position: flex;
+                justify-content: center;
+                text-align: center;
+            }
+            #pfixed {
+                color: white;
+                font-family: sans-serif;
+                font-size: 13px;
+                position: fixed;
+                bottom: 10px;
+                width: 200px;
+                right: 10px;
+            }
+            #topdiv {
+                width: 250px;
+            }
+            #knapp2 {
+                background-color: rgb(255, 153, 0);
+                border: none;
+                width: 100px;
+                height: 30px;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+            #knapp2:hover {
+                background-color: rgb(228, 38, 4);
+            }
+            #knapp2:active {
+                background-color: rgb(219, 67, 40);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="topdiv">
+            <div id="knappdiv2"><a href="frontpage.html"><button id="knapp2">Back</button></a></div>
+        </div>
+
+        <h1>Pong: 1 vs 1</h1>
+
+        <div id="pid">
+            <p id="p1">Player 1:</p>
+            <p id="p2">Player 2:</p>
+            <div id="divknapp">
+                <div id="p1sum"><p id="bla">0</p></div>
+                <div id="p2sum"><p id="gron">0</p></div>
+                <div id="knappdiv">
+                    <button id="knapp" onClick="window.location.reload()">Restart</button>
+                </div>
+            </div>
+        </div>
+        <div id="canvasdiv">
+          <canvas id="mittCanvas" width="600" height="400"></canvas>
+        </div>
+
+        <div id="fixed"><p id="pfixed">A Kasper Melheim production.</p></div>
+        <script>
+            "use strict"
+
+            var valg = prompt("How many points for victory?");
+
+            if (valg == null || valg == "") {
+                     alert("User cancelled the prompt.");
+                } else {
+                    var poengsum = valg;
+                }
+                console.log(poengsum);
+
+            var knappEl = document.querySelector("#knapp");
+            var blaEl = document.querySelector("#bla");
+            var gronEl = document.querySelector("#gron");
+
+            var blaSum = 1;
+            var gronSum = 1;
+            var i = 0;
+
+            var animasjonID;
+            var avslutt = false;
+
+
+            // funksjonen spill kjører hele spillet og gjentar i det uendelige
+            function spill() {
+                // Tømmer alt innhold på canvas-elementet
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Flytter og tegner opp de to spillerne
+                spiller1.flytt();
+                spiller1.tegn();
+                spiller2.flytt();
+                spiller2.tegn();
+
+                // Flytter og tegner opp ballen
+                ball.flytt(spiller1, spiller2);
+                ball.tegn();
+
+                if (blaSum == poengsum) {
+                    ctx.font = "30px sans-serif";
+                    ctx.fillText("Game over!",220,130);
+                    ctx.fillText("Player 1 wins the game.",150,170);
+                } else if (gronSum == poengsum) {
+                    ctx.font = "30px sans-serif";
+                    ctx.fillText("Game over!",220,130);
+                    ctx.fillText("Player 2 wins the game.",150,170);
+                }
+
+                // Løkke som bestemmer verdien til "avslutt"
+                if ((blaSum == poengsum) || (gronSum == poengsum)) {
+                    avslutt = true;
+                } else {
+                    avslutt = false;
+                }
+
+                // Løkke som sjekkar verdien til "avslutt"
+                if (avslutt) {
+                    // Dersom true, sluttar animasjon
+                    cancelAnimationFrame(animasjonID);
+
+                } else {
+                    // Gjentar funksjonen spill()
+                    animasjonID = requestAnimationFrame(spill);
+                }
+                
+            }
+            // Setter i gang funksjonen spill første gang
+            animasjonID = requestAnimationFrame(spill);
+
+
+            // Henter canvas-element
+            var canvas = document.querySelector("#mittCanvas");
+            var ctx = canvas.getContext("2d");
+
+            // Lager en tom array som skal holde på tastene som trykkes ned
+            var taster = [];
+
+            // Lytter etter keydown- og keyup- hendelser
+            window.addEventListener("keydown", knappnedopp);
+            window.addEventListener("keyup", knappnedopp);
+
+            // Når en knapp holdes nede registreres den som true i arrayen taster,
+            // tilsvarende slettes den (settes til false) når den ikke lenger holdes nede
+            function knappnedopp(e) {
+                if (e.type === "keydown") {
+                    taster[e.keyCode] = true;
+                }       else if (e.type === "keyup") {
+                    delete taster[e.keyCode];
+                }
+            }
+
+            // Lager en klasse for spillerne
+            class Spiller {
+                constructor(x, y, bredde, hoyde, fart, opptast, nedtast, farge) {
+                    // Spillernes egenskaper
+                    this.x = x;
+                    this.y = y;
+                    this.bredde = bredde;
+                    this.hoyde = hoyde;
+                    this.fart = fart;
+                    this.opptast = opptast; 
+                    this.nedtast = nedtast;
+                    this.farge = farge;
+                }
+                
+                // Metoden tegn() tegner opp spilleren
+                tegn() {
+                    ctx.fillStyle = this.farge;
+                    ctx.fillRect(this.x, this.y, this.bredde, this.hoyde);
+                }
+
+                // Metoden flytt() flytter spilleren
+                flytt() {
+                    this.y += this.fart;
+
+                    if (taster[this.opptast]) {
+                        this.y -= 4;
+                        this.fart = -4;
+                    }       else if (taster[this.nedtast]) {
+                            this.y += 4;
+                            this.fart = 4;
+                        }       else {
+                                this.fart = 0;
+                            }
+
+                    if (this.y + 78 > canvas.height || this.y +2 < 0) {
+                        this.fart = -this.fart;
+                    }
+
+                }
+            }
+
+                // Lager de to spillerne
+                var spiller1 = new Spiller(25, 130, 20, 80, 0, 87, 83, "blue");
+                var spiller2 = new Spiller(555, 190, 20, 80, 0, 75, 77, "green");
+
+                // Lager en klasse for ballen
+                class Ball {
+                    constructor(x, y, radius, xFart, yFart, farge) {
+                        this.x = x; 
+                        this.y = y;
+                        this.radius = radius;
+                        this.xFart = xFart;
+                        this.yFart = yFart;
+                        this.farge = farge;
+                    }
+
+                    // Metoden tegn() tegner ballen
+                    tegn() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
+                        ctx.fillStyle = this.farge;
+                        ctx.fill();
+                    }
+
+                    // Metoden flytt() flytter ballen
+                    // Argumentene sp1 og sp2 er de to spillerobjektene
+                    flytt(sp1, sp2) {
+                        this.x += this.xFart;
+                        this.y += this.yFart;
+
+                        var topp = this.y - 10;
+                        var bunn = this.y + 10;
+                        var venstre = this.x - 10;
+                        var hoyre = this.x + 10;
+
+                        // Treffer topp- eller bunnvegg
+                        if (topp < 0 || bunn > canvas.height) {
+                            this.yFart = -this.yFart;
+                        }
+
+                        // Treffer spiller 1
+                        if (venstre < sp1.x + sp1.bredde && topp < sp1.y + sp1.hoyde && bunn > sp1.y) {
+                            this.xFart = -this.xFart;
+                            i++;
+                            console.log(i);
+
+                            // Hvis sp1 ikke står stille
+                            if (sp1.fart !== 0) {
+                                this.yFart = sp1.fart;
+                                
+                            }
+                        }
+
+                        // Treffer spiller 2
+                        if (hoyre > sp2.x && topp < sp2.y + sp2.hoyde && bunn > sp2.y) {
+                            this.xFart = -this.xFart;
+                            i++;
+                            console.log(i);
+
+                            // Hvis sp2 ikke står stille
+                            if (sp2.fart !== 0) {
+                                this.yFart = sp2.fart;
+                               
+                            }
+                        }
+
+                        // Forlater banen
+                        if (this.x < 0) {
+                            this.x = 300;
+                            this.y = 200;
+                            // Ut på venstre side, player 2 får poeng
+                            gronEl.innerHTML = gronSum++;
+                        } else if (this.x > canvas.width) {
+                            this.x = 300;
+                            this.y = 200;
+                            // Ut på høyre side, player 2 får poeng
+                            blaEl.innerHTML = blaSum++;
+                        }
+                    }
+                }
+
+                // Lager ballen
+                var ball = new Ball(300, 200, 10, 10, 0, "white");
+
+                
+        
+        </script>
+        
+    
+    
+    </body>
+</html>

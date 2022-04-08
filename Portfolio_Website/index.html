@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/83116db2a7.js" crossorigin="anonymous"></script>
+    <title>Kasper Melheim</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <ul id="nav">
+        <p id="title">Kasper Melheim</p>
+        <li><a class="active" onclick="scrollFunc3()">Contact</a></li>
+        <li><a onclick="scrollFunc2()">Socials</a></li>
+        <li><a onclick="scrollFunc1()">Skills</a></li>
+        <li><a onclick="scrollFunc()">About me</a></li>
+    </ul>
+
+    <div class='ripple-background'>
+      <div class='circle xxlarge shade1'></div>
+      <div class='circle xlarge shade2'></div>
+      <div class='circle large shade3'></div>
+      <div class='circle mediun shade4'></div>
+      <div class='circle small shade5'></div>
+    </div>
+
+    <div id="wrapper">
+
+      <div>
+
+        <div class="header">
+          <h1>Hello</h1>
+          <p style=font-size:22px;>and welcome to my website.</p>
+        </div>
+        
+        <div id="wave_imgdiv">
+          <img id="kasper_img" src="kasper.jpg" alt="Kasper">
+          <img id="wave_img" src="wave.png" alt="Waving emoji">
+        </div>
+        
+      </div>
+
+      <div id="about">
+        <h2>About me</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      <br>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      </div>
+
+      <div id="skills" style=margin-top:250px>
+        <h2>Skills</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      <br>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      </div>
+
+      <div id="socials" style=margin-top:250px;text-align:center;>
+        <h2>Social media</h2>
+        <br>
+        <a href="https://www.linkedin.com/in/kasper-melheim-6579121a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/kaspermelheim" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/kasper.melheim/" target="_blank" ><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/kaspermelheim/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      
+
+      <div id="contact" style=margin-top:250px;text-align:center;>
+        <h2>Contact</h2>
+        <p>
+          There are multiple ways to get in contact:</p><br><br><br>
+
+          <div class="tooltip">
+          <p><span class="tooltiptext" id="myTooltip">Click to copy</span><i class="fas fa-phone-alt"></i><p id="p1">+47 97683998</p></p><br>
+          <p><span class="tooltiptext" id="myTooltip">Click to copy</span><i class="fas fa-envelope"></i><p id="p2">kasmel12@hotmail.com</p></p><br>
+          <p><span class="tooltiptext" id="myTooltip">Click to copy</span><i class="fab fa-discord"></i><p id="p3">Kasper#0314</p></p><br>
+          </div>
+        </p>
+
+      </div>
+
+
+      <footer>
+        <div id="footer">
+         <div id="footerdiv"> 
+          <p>Made by Kasper Melheim.</p>
+          <p>Written in: HTML, CSS & JS</p>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">To the top</button>
+         </div>
+        </div>
+      </footer>
+        
+    </div>
+
+    <div class='ripple-background' style=position:absolute;z-index:-1;>
+      <div class='circle2 xxlarge shade1'></div>
+      <div class='circle2 xlarge shade2'></div>
+      <div class='circle2 large shade3'></div>
+      <div class='circle2 mediun shade4'></div>
+      <div class='circle2 small shade5'></div>
+    </div>
+
+    <script>
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      function scrollFunc() {
+        var el = document.getElementById("about");
+        el.scrollIntoView();
+      }
+      function scrollFunc1() {
+        var el = document.getElementById("skills");
+        el.scrollIntoView();
+      }
+      function scrollFunc2() {
+        var el = document.getElementById("socials");
+        el.scrollIntoView();
+      }
+      function scrollFunc3() {
+        var el = document.getElementById("contact");
+        el.scrollIntoView();
+      }
+
+      function alertCopy() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Text copied"
+      }
+
+
+      // Copy text on click 
+      const span = document.getElementById("p1");
+      const span1 = document.getElementById("p2");
+      const span2 = document.getElementById("p3");
+
+      span.onclick = function() {
+        document.execCommand("copy");
+      }
+
+      span.addEventListener("copy", function(event) {
+        event.preventDefault();
+        if (event.clipboardData) {
+          event.clipboardData.setData("text/plain", span.textContent);
+          console.log(event.clipboardData.getData("text"))
+        }
+      });
+
+      span1.onclick = function() {
+        document.execCommand("copy");
+      }
+
+      span1.addEventListener("copy", function(event) {
+        event.preventDefault();
+        if (event.clipboardData) {
+          event.clipboardData.setData("text/plain", span1.textContent);
+          console.log(event.clipboardData.getData("text"))
+        }
+      });
+
+      span2.onclick = function() {
+        document.execCommand("copy");
+      }
+
+      span2.addEventListener("copy", function(event) {
+        event.preventDefault();
+        if (event.clipboardData) {
+          event.clipboardData.setData("text/plain", span2.textContent);
+          console.log(event.clipboardData.getData("text"))
+        }
+      });
+
+      </script>
+    
+  </body>
+</html>
+
+
+

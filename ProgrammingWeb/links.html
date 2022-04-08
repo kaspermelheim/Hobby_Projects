@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+    <html>    
+        <head>        
+            <title>ProgrammingWeb</title>        
+            <meta charset="utf-8" />                
+            <link rel="stylesheet" type="text/css" href="nettstedstil.css" />
+            <link rel="stylesheet" type="text/css" href="hovedsidestil.css" />        
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <link rel="shortcut icon" href="licon.png" /> 
+            <link rel="icon" href="pageicon.png">    
+        </head>
+     <body>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <script>
+                    // When the user scrolls down 20px from the top of the document, show the button
+                    window.onscroll = function() {scrollFunction()};
+                    
+                    function scrollFunction() {
+                      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("myBtn").style.display = "block";
+                      } else {
+                        document.getElementById("myBtn").style.display = "none";
+                      }
+                    }
+                    
+                    // When the user clicks on the button, scroll to the top of the document
+                    function topFunction() {
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+                    }
+                    </script>
+
+        <nav id="menyen" class="meny">                                   
+            <div id="meny_lukket">                
+                <a href="#meny_aapen"><img id="aapnemenypng" src="aapnemeny.png"></a>                            
+           </div>            
+           <div id="meny_aapen">                
+               <a href="#meny_lukket"><img id="xbutton" src="buttonx.png"></a>                
+               <ul>                     
+                   <li><a href="index.html">                        
+                       <img id="hjemid" src="hjem.png">                 
+                       </a>
+                   </li>                    
+                   <li><a href="kodespraak.html">Languages</a></li>                    
+                   <li><a href="developers.html">Developers</a></li>                    
+                   <li><a href="frontpage.html">Pong game!</a></li>                   
+                   <li><a href="links.html">Links and sources</a></li>                    
+                                  
+               </ul>            
+           </div>                    
+       </nav>
+          <header id="tekstheader"> 
+                <a href="index.html"> 
+                    <img src="title.png" alt="logo" style="width:500px;height:200px;">   
+                </a>                                                
+        </header> 
+        <marquee id="frontmarquee2" behavior="scroll" direction="left">
+                HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 JAVASCRIPT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  PYTHON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HASKELL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    MYSQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RUBY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
+                <!--<img src="panorama2.jpg" height="40" alt="Natural" /> -->
+               </marquee>                          
+        <header id="bildeheader">            
+                        
+        </header>             
+        <main>                
+            <article id="articlelinks">                    
+                <h2>Useful links:</h2><br><br>                  
+                <ul>
+                    <a href="https://www.w3schools.com/"><li>w3schools.com</li></a>
+                    <a href="https://en.wikipedia.org/wiki/Computer_programming"><li>wikipedia.com/computer_programming</li></a>
+                    <a href="http://www.maggiore.net/programming.asp"><li>http://www.maggiore.net/programming.asp</li></a>
+                    <a href="https://sites.google.com/site/liptonyunz/home/reason-of-why-people-use-computer"><li>https://sites.google.com/site/liptonyunz/home/reason-of-why-people-use-computer</li></a>
+                    <a href="https://thenextweb.com/contributors/2018/05/07/first-principles-of-programming/"><li>https://thenextweb.com/contributors/2018/05/07/first-principles-of-programming/</li></a>
+                </ul>               
+            </article>            
+        </main>
+
+        <main>
+                <article>
+                        <marquee id="frontmarquee" behavior="scroll" direction="left">➞ All credit for the information written on this site 
+                            can be found under "links and sources" tab ⬅</marquee>
+                
+                </article>
+            </main> 
+            
+        </div>
+        
+        <div id="box"><p id="bottom">© Kasper Melheim 2019</p></div>
+        <div id="social">
+            <a href="http://www.instagram.com/kaspermelheim" target="_blank"><img src="instagram.png" width="40px" height="40px" alt="Programming languages"></a>
+            <a href="https://www.facebook.com/kasper.melheim" target="_blank"><img src="facebook.png" width="40px" height="40px"alt="Programming languages"></a>
+          </div>
+    </body>   
+</html>

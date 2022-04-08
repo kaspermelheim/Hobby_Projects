@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pong-Game</title>
+        <link rel="stylesheet" type="text/css" href="nettstedstil.css" />
+        <link rel="stylesheet" type="text/css" href="hovedsidestil.css" /> 
+        <style>
+
+           body {
+               background-color: #8a0000;
+           }
+           h1 {
+               font-family: sans-serif;
+               font-size: 20px;
+               color: white;
+               margin: auto;
+               width: 50%;
+               text-align: center;
+               margin-top: 50px;
+           }
+           .big {
+               font-size: 50px;
+               font-family: sans-serif;
+               color: white;
+           }
+           #knappdiv {
+               width: 260px;
+               margin: auto;
+           }
+           #knapp1 {
+               float: left;
+           }
+           #knapp2 {
+               float: right;
+           }
+           #knapp {
+                margin: auto;
+                width: 120px;
+                height: 50px;
+                background-color: rgb(255, 153, 0);
+                border: none;
+                font-weight: bold;
+                font-size: 15px;
+                border-radius: 5px;
+            }
+            #knapp:hover {
+                background-color: rgb(228, 38, 4);
+            }
+            #knapp:active {
+                background-color: rgb(219, 67, 40);
+            }
+            #pfixed {
+                color: white;
+                font-family: sans-serif;
+                font-size: 13px;
+                position: fixed;
+                bottom: 10px;
+                width: 200px;
+                right: 10px;
+            }
+            #rulesdiv {
+                position: relative;
+                width: 50%;
+                height: 200px;
+                color: white;
+                font-family: sans-serif;
+                font-size: 15px;
+                margin: auto;
+                font-weight: bold;
+                top: 50px;
+            }
+            #rules1 {
+                width: 45%;
+                float: left;
+            }
+            #rules2 {
+                width: 45%;
+                float: right;
+            }
+            #title {
+                font-size: 17px;
+                font-family: sans-serif;
+                color: rgb(255, 153, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="menyen">
+            <div id="meny_lukket">                
+                <a href="#meny_aapen"><img id="aapnemenypng" src="aapnemeny.png"></a>            
+                </div>            
+                <div id="meny_aapen">                
+                    <a href="#meny_lukket"><img id="xbutton" src="buttonx.png"></a>            
+             <ul>                            
+                 <li><a href="kodespraak.html">Languages</a></li>                
+                 <li><a href="developers.html">Developers</a></li>                
+                 <li><a href="frontpage.html">Pong game!</a></li>                
+                 <li><a href="links.html">Links and sources</a></li>                
+                                                    
+             </ul>
+            </div>       
+         </nav>
+        <h1>Welcome to:<br><span class="big">Pong-Game!</span></h1>
+        <h1 style="margin-bottom:20px;">Chose game type:</h1>
+        <div id="knappdiv">
+            <div id="knapp1"><a href="pong.html"><button id="knapp" onclick="">1 vs 1</button></a></div>
+            <div id="knapp2"><a href="pong2.html"><button id="knapp">Practice</button></a></div>
+        </div>
+        <div id="rulesdiv">
+            <div id="rules1"><p id="p1"><span id="title">1 vs 1.</span><br><br> The rules are simple. This gamemode lets you play against your friend.<br> <br>
+                Before starting you need to agree on who plays as player 1 and who plays as player 2. Player 1 controls
+                their object with "W" and "S", and player 2 controls their object with "K" and "M". 
+                <br><br>First one to 10 points win. Have fun! </p></div>
+            <div id="rules2"><p id="p2"></p><span id="title">Practice.</span><br><br> This gamemode is more simple.<br><br> No points, no 1 vs 1. Just you against a wall. This gamemode is 
+            excellent for when you want to practice to beat your friend woh keeps winning against you in 1 vs 1 mode.<br><br> Have fun!</div>
+        </div>
+            <div id="fixed"><p id="pfixed">A Kasper Melheim production.</p></div>
+        
+    
+    
+    </body>
+</html>

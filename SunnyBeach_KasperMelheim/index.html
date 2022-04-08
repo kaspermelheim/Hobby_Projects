@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Sunny Beach</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="stil.css" />
+        <link rel="icon" href="icon.png">
+    </head>
+    <body>
+        <a name="linktotop"></a>
+        <div id="banner">
+            <img src="banner.png" alt="Sunny Beach banner" width="100%">
+        </div>
+<div id="wrapper">   
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="aktiviteter.html">Aktiviteter</a></li>
+            <li><a href="hotell.html">Hotell</a></li>
+            <li><a href="collage.html">Collage</a></li>
+            <li><a href="utflukter.html">Utflukter</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
+       <a id="link" href="#linktobottom" style="text-decoration:none;color:white;">Værvarsel YR</a>
+    
+      <div id="marqueetop">
+          <marquee scrollamount=20>VELKOMMEN TIL <strong>SUNNY BEACH</strong>, BULGARIA</marquee>
+      </div>
+      
+        <div class="facebook">
+            <iframe id="like" src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/pages/Sunny-Beach/108501455840322?ref=ts&amp;fref=ts&width=200&layout=box_count&action=like&show_faces=false&share=true&height=65&appId" 
+             width="100" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      <div class="slideshow">
+        <div class="slideshow-container">
+           <div class="mySlides fade">
+              <div class="numbertext">1 / 8</div>
+                 <img class="imgslideshow" src="./slideshow/img1.jpg" style="width:100%">
+                   <div class="text">Store strender med god badetemperatur.</div>
+          </div>
+
+           <div class="mySlides fade">
+              <div class="numbertext">2 / 8</div>
+                 <img class="imgslideshow" src="./slideshow/img2.jpg" style="width:100%">
+                   <div class="text">Reis til Nessebar for å se gamle ruiner.</div>
+          </div>
+             <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                   <img class="imgslideshow" src="./slideshow/img3.jpg" style="width:100%">
+                     <div class="text">Hotell med nydelig utsikt mot havet.</div>
+          </div>
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 8</div>
+                 <img class="imgslideshow" src="./slideshow/img4.jpg" style="width:100%">
+                   <div class="text">Romantisk tur med kjæresten.</div>
+          </div>
+          <div class="mySlides fade">
+              <div class="numbertext">5 / 8</div>
+                 <img class="imgslideshow" src="./slideshow/img7.jpg" style="width:100%">
+                   <div class="text">Lyst på spenning? Reis på det lokale tivoliet.</div>
+          </div>
+          <div class="mySlides fade">
+              <div class="numbertext">6 / 8</div>
+                 <img class="imgslideshow" src="./slideshow/img8.jpg" style="width:100%">
+                   <div class="text">Gatekjøkken med salg av kebab.</div>
+          </div>
+
+           <div class="mySlides fade">
+              <div class="numbertext">7 / 8</div>
+                 <img class="imgslideshow" src="./slideshow/img5.jpg" style="width:100%">
+                    <div class="text">Prøv den berømte steiken.</div>
+          </div>
+
+           <div class="mySlides fade">
+              <div class="numbertext">8 / 8</div>
+                <img class="imgslideshow" src="./slideshow/img6.jpg" style="width:100%">
+                   <div class="text">Det er alltid noe å finne på i Sunny Beach!</div>
+          </div>
+
+             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+<br> 
+<!-- Javascript -->
+<script>
+    var slideIndex = 0;
+       showSlides();
+          function showSlides() {
+
+            var i;
+               var slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+        }
+
+        slideIndex++;
+        if (slideIndex> slides.length) {slideIndex = 1
+        } 
+
+        slides[slideIndex-1].style.display = "block"; 
+       setTimeout(showSlides, 4500); // Change image every x milliseconds
+      }
+</script>
+     <div id="list2">
+        <ul>
+          <li>
+              <p>
+                <u><mark>Lange strender</mark></u><br>Sunny Beach har en <strong>stor</strong> strand som grenser til Svartehavet. 
+                Her kan du finne deg en solseng og ligge i timesvis, og eventuelt ta deg en dukkert om du blir for varm. Les mer om hva du kan gjøre på stranda 
+                 <a href="aktiviteter.html">her.</a>
+             </p>
+         </li>
+          <li>
+              <p>
+                  <u><mark>Kultur</mark></u><br>Å ligge på stranda hele dagen er ikke det eneste du kan gjøre. 
+                      Om du er mer fan av å komme deg litt bort fra folk kan du reise på utflukt innover i landet, eller reise til gamle byer og bygder og se på hundrevis av år gamle ruiner. 
+                       Transport fins deg overalt, både buss og taxi. 
+              </p>
+          </li>
+          <li>
+              <p>
+                  <u><mark>Komfort</mark></u><br>Om du har fått nok av sola kan det vært godt å slappe av inne på hotellet. 
+                    I Sunny Beach finnes det <strong>mange</strong> ulike hotell, både 5-stjerners men også hotell av mindre kvalitet til en mindre pris. 
+                    Les mer om hotell 
+                    <a href="hotell.html">her.</a>
+              </p>
+          </li>
+          <li>
+              <p>
+                  <u><mark>Fantastisk mat</mark></u><br>I Sunny Beach er det et stort utvalg på mat, og det finnes så mange gode og nye smaker. 
+                    Det er hundrevis av restauranter du kan spise på, til en billig penge.
+              </p>
+         </li>
+      </ul>
+     </div>
+      <div class="ja">
+            <h3>Bør du reise til Sunny Beach? Svaret er <span style="color:#EE7600">JA!</span></h3>
+      </div>
+      <div class="panorama">
+           <img src="panorama.jpg" alt="Sunny Beach Panorama" width="1220" height="300">
+      </div>
+    
+      <aside id="yr">
+             <script src="http://www.yr.no/sted/Bulgaria/Burgas/Sunny_Beach/ekstern_boks_time_for_time.js"></script>
+                 <noscript>
+                    <a href="http://www.yr.no/sted/Bulgaria/Burgas/Sunny_Beach/">yr.no: Værvarsel for Sunny Beach</a>
+                </noscript>
+       </aside>
+      <aside id="yr2">
+          <script src="http://www.yr.no/sted/Bulgaria/Burgas/Sunny_Beach/ekstern_boks_liten.js"></script>
+               <noscript>
+                   <a href="http://www.yr.no/sted/Bulgaria/Burgas/Sunny_Beach/">yr.no: Værvarsel for Sunny Beach</a>
+               </noscript> 
+       </aside>   
+       <div id="bottom">
+           <img src="bottom.png" alt="Bottom box" width="100%" height="150px">
+       </div>
+       <a name="linktobottom"></a>
+       <a id="link2" href="#linktotop" style="text-decoration:none;color:white;">Til toppen</a>
+       <!--Copyright og redigeringslogg-->
+         <div id="bottomtext">
+             <p>© Kasper Melheim <br>Tlf: 97683998 <br>E-post: kasmel12@skule.sfj.no<br>Sist redigert: 02.02.2017 - Kasper</p>
+        </div>
+
+            <div id="marqueebottom">
+                 <marquee scrollamount=13><strong>Følg Kasper Melheim på sosiale medier:</strong></marquee>
+           </div>
+           <div id="fb">
+               <a href="https://www.facebook.com/kasper.melheim"><img src="./Icon/facebook.png" alt="Facebook logo" width="35px"></a>
+               <p> <a href="https://www.facebook.com/kasper.melheim" style="text-decoration:none;">Kasper Melheim</a></p>
+            </div>
+
+            <div id="ig">
+               <a href="https://www.instagram.com/kaspermelheim/"><img src="./Icon/Instagram.png" alt="Instagram logo" width="35px"></a>
+               <p> <a href="https://www.instagram.com/kaspermelheim/" style="text-decoration:none;">@kaspermelheim</a></p>
+            </div>
+            <div id="fb">
+               <a href="https://www.facebook.com/kasper.melheim"><img src="./Icon/facebook.png" alt="Facebook logo" width="35px"></a>
+               <p> <a href="https://www.facebook.com/kasper.melheim" style="text-decoration:none;">Kasper Melheim</a></p>
+            </div>
+
+            <div id="ig">
+               <a href="https://www.instagram.com/kaspermelheim/"><img src="./Icon/Instagram.png" alt="Instagram logo" width="35px"></a>
+               <p> <a href="https://www.instagram.com/kaspermelheim/" style="text-decoration:none;">@kaspermelheim</a></p>
+            </div>
+    </body>
+</html>

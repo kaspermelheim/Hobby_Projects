@@ -1,0 +1,78 @@
+#wrapper {    
+    display: flex;    
+    flex-wrap: wrap; } 
+nav {    
+    width: 100%; } 
+header {    
+    width: 100%;        
+    background-color: rgb(255, 255, 255);    
+    text-align: center;            } 
+header h1 {    
+    padding: 20px;    
+    color: white;        
+    text-shadow: 0px 0px 15px red; } 
+header img {    
+    width: 100%;   
+     max-width: 400px; }
+main {    
+    width: 100%;
+    display: flex;    
+    flex-wrap: wrap;    }
+main article {    
+    width: 100%;    
+    padding: 10px;    
+    border-bottom: solid 1px grey; } 
+main h2 {    
+    padding-bottom: 5px; }
+#menyen {        
+     order: 1;    }        
+#tekstheader {        order: 0; margin-top: 5px;    }        
+#bildeheader {        order: 2;  margin-bottom: 30px;    }   
+#xbutton {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    margin-top: 3px;
+}     
+#aapnemenypng {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-right: -10px;
+}
+main {        
+    order: 3;        
+    flex-wrap: nowrap;    }        
+    main article {               
+        padding: 10px;;        
+        border: none; 
+       }     }
+
+
+#hrdesign {
+    border: 30px solid rgb(255, 255, 255);
+}
+
+#bottom {
+    
+    padding: 10px;
+}
+
+#frontmarquee {
+    background-color: rgb(133, 166, 192); 
+    padding: 5px;
+}
+#frontmarquee2 {
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold; 
+}
+#box {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+}
+#article1 {
+    margin-left: 10px;
+}
+

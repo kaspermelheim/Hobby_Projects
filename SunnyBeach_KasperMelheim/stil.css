@@ -1,0 +1,600 @@
+#yr {
+  position: absolute;
+  top: 2130px;
+  left: 75px;
+}
+#yr2 {
+  position: absolute;
+  top: 2190px;
+  right: 200px;
+}
+div#fb {
+  position: absolute;
+  top: 2630px;
+  right: 200px;
+  width: 200px;
+}
+div#fb p {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  font-size: 20px;
+}
+div#fb a:hover {
+  color: red;
+  border-bottom: solid 2px red;
+}
+div#fb img {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+}
+div#ig {
+  position: absolute;
+  top: 2680px;
+  right: 200px;
+  width: 200px;
+}
+div#ig p {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  font-size: 20px;
+}
+div#ig a:hover {
+  color: red;
+  border-bottom: solid 2px red;
+}
+div#ig img {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+}
+#banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#marqueetop {
+  position: absolute;
+  color: #ffae00;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  top: 220px;
+  width: 1340px;
+}
+
+#marqueebottom {
+  position: absolute;
+  color: #0061a7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  top: 2625px;
+  left: 120px;
+  width: 1225px;
+}
+
+body {
+    background-color: dodgerblue
+}
+
+div.facebook {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000
+}
+/* Slideshow container */
+.slideshow-container {
+  height: 100%;
+  position: flex;
+  max-width: 1050px;
+  min-width: 1050px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 35px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 97.8%;
+  text-align: center;
+  background-color: #EE7600;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 25px;
+  padding: 4px 6px;
+  position: absolute;
+  top: 0;
+  border: solid 4px #EE7600;
+  background-color: #ffae00
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+div.slideshow {
+    position: absolute;
+    left: 150px;
+    border: solid 4px #EE7600;
+    top: 290px;
+}
+
+/* LIST #2 */
+#list2 { width:1000px; z-index:50; }
+#list2 ul { font-style:italic; font-family:Georgia, Times, serif; font-size:30px; color: black;  }
+#list2 ul li { }
+#list2 ul li p { padding:8px; font-style:normal; font-family:Arial; font-size:24px; color:black; border-left: 1px solid black; }
+#list2 ul li p em { display:block; }
+#list2 {
+    position: absolute;
+    top: 1080px;
+    left: 180px;
+}
+
+body { 
+    background-image: url('background.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+div.ja {
+  position: absolute;
+  top: 1020px;
+  left: 200px;
+  z-index: 50;
+}
+h3 {
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+div.panorama {
+  position: absolute;
+  top: 1770px;
+  left: 50px;
+  margin: 10px;
+  border: solid 4px #EE7600;
+  background-color: #EE7600;
+}
+
+mark {
+  background: #EE7600
+}
+ img.imgslideshow {
+   position: flex;
+   max-width: 1050px;
+   height: 100%;
+   max-height: 700px;
+   min-height: 700px;
+   min-width: 1050px;
+ }
+ h2 {
+   font-size: 18px;
+ }
+#container {
+  position: flex;
+  flex-wrap: nowrap;
+  z-index: 1000;
+
+}
+
+nav {
+	margin: 0px 0px;
+	background-color: #EE7600;
+  position: absolute;
+  top: 145px;
+  left: 0px;
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+  margin-right: 188.5px;
+  margin-left: 160px;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	background-color: #EE7600;
+	}
+nav a {
+transition: 0.3s ease;
+  background: #EE7600;
+  color: #ffffff;
+  font-size: 36px;
+  text-decoration: none;
+  
+  padding: 0px 36.95px;
+  line-height: 60px;
+  margin-left: 9px;
+}
+
+nav a:hover { 
+	background-color: #0061a7;
+  color: black;
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff; 
+}
+
+
+#bottom {
+  position: absolute;
+  left: 0px;
+  top: 2600px;
+}
+/*Kode for værvarsel knapp */
+  #link {
+  position: absolute;
+  top: 110px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+	background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+  #link:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+	background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+/*Kode for "til toppen" knapp */
+  #link2 {
+  position: absolute;
+  top: 2625px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+	background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+  #link2:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+	background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+#bottomtext {
+  position: absolute;
+  top: 2650px;
+  left: 20px;
+  z-index: 1000;
+}
+/*Innhold aktiviter.html*/
+div#vannski {
+  position: absolute;
+  top: 280px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#segway {
+  position: absolute;
+  top: 840px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#tivoli {
+  position: absolute;
+  top: 1440px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#volleyball {
+  position: absolute;
+  top: 2040px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#divcontainer p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding: 20px;
+  color: #154682;
+  width: 700px;
+}
+div#divcontainer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #154682;
+}
+div#divcontainer img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: solid 3px black;
+}
+
+/*Innhold hotell.html */
+div#hotell1 {
+  position: absolute;
+  top: 280px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#hotell2 {
+  position: absolute;
+  top: 2040px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#hotell3 {
+  position: absolute;
+  top: 840px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#hotell4 {
+  position: absolute;
+  top: 1440px;
+  left: 30px;
+  width: 1280px;
+  height: 500px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#divcontainer2 p {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding: 20px;
+  color: #154682;
+  width: 700px;
+  right: 2px;
+}
+div#divcontainer2 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #154682;
+}
+div#divcontainer2 img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border: solid 3px black;
+}
+
+/*Innhold collage.html */
+
+div#collage {
+  position: absolute;
+  top: 500px;
+  left: 320px;
+  border: dotted 20px white;
+}
+
+div#collagetittel {
+  position: absolute;
+  top: 260px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  left: 245px;
+  background-color: white;
+  padding: 10px;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+
+div#collagetittel:hover {
+  background-color: lightslategrey;
+  color: white;
+}
+
+div#collage2 {
+  position: absolute;
+  top: 2025px;
+  left: 75px;
+  border: double 20px white;
+}
+
+/*Innhold utflukter.html */
+
+div#utflukt1 {
+  position: absolute;
+  top: 330px;
+  left: 60px;
+  width: 500px;
+  height: 950px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#utflukt2 {
+  position: absolute;
+  top: 330px;
+  left: 775px;
+  width: 500px;
+  height: 950px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#utflukt3 {
+  position: absolute;
+  top: 1430px;
+  left: 60px;
+  width: 500px;
+  height: 950px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#utflukt4 {
+  position: absolute;
+  top: 1430px;
+  left: 775px;
+  width: 500px;
+  height: 950px;
+  border: solid 4px black;
+  background-color: orange;
+}
+
+div#divcontainer3 p {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: #154682;
+  width: 450px;
+  left: 20px;
+}
+div#divcontainer3 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #154682;
+}
+div#divcontainer3 img {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border: solid 3px black;
+}
+
+hr {
+  position: absolute;
+  top: 1350px;
+  color: orange;
+  border: solid 2px black;
+  width: 1326px;
+}
+
+hr#hr2 {
+  position: absolute;
+  top: 260px;
+  color: orange;
+  border: solid 2px black;
+  width: 1326px;
+}
+
+hr#hr3 {
+  position: absolute;
+  top: 2450px;
+  color: orange;
+  border: solid 2px black;
+  width: 1326px;
+}
+
